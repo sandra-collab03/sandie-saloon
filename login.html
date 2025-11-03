@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | GlowSalon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Sandie Beaauty Salon</h1>
+      <p class="tag">Welcome back! Please log in.</p>
+    </div>
+  </header>
+
+  <main class="login-section">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+            <p>dont have an account? <a href="register.html">register here</a></p>
+        <p id="loginMessage"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="public.js"></script>
+</body>
+</html>
