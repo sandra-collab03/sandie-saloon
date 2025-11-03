@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | GlowSalon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="register-box">
+    <h2>Create an Account</h2>
+    <form id="registerForm">
+      <div class="input-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit" class="btn">Register</button>
+      <p id="regMessage"></p>
+    </form>
+    <p>Already have an account? <a href="index.html">Login here</a></p>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+
+  const res = await fetch("/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: formData.get("Full name"),
+      email: formData.get("Email"),
+      password: formData.get("Password")
+    })
+  });
+
+  const data = await res.json();
+  alert(data.message);
+
+  if (res.ok) {
+    window.location.href = "/";
+  }
+});
+  </script>
+</body>
+</html>
