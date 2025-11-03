@@ -1,0 +1,286 @@
+/* styles.css - simple, clean responsive layout */
+:root{
+  --accent:#a86cff;
+  --muted:#666;
+  --bg:#000000;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial; margin:0;background:var(--bg);color:#222;line-height:1.45}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.06);position:sticky;top:0;z-index:20}
+.brand h1{margin:0;font-size:20px}
+.nav a{margin:0 8px;color:var(--muted);text-decoration:none}
+.hero{background:linear-gradient(90deg, #fff 0%, #fff0 60%), url('https://via.placeholder.com/1600x600') center/cover no-repeat;padding:48px 20px;color:#fff}
+.hero-inner{max-width:900px;background:rgba(0,0,0,0.35);padding:28px;border-radius:8px}
+.btn{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;border:0;cursor:pointer}
+.card{background:#fff;margin:16px auto;padding:18px;border-radius:8px;max-width:1100px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+.site-footer{padding:20px;text-align:center;color:var(--muted)}
+.team{display:flex;gap:12px}
+.member{text-align:center}
+.member img{border-radius:8px;width:120px;height:120px;object-fit:cover}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:12px}
+.note{margin-top:12px;color:green}
+#wa-btn{position:fixed;right:16px;bottom:16px;background:#25D366;color:#fff;padding:12px 14px;border-radius:999px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.15)}
+@media(max-width:800px){.contact-grid{grid-template-columns:1fr}}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.site-header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed; /* Keeps nav at top */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.site-header {
+  background-color: palevioletred;
+  display: flex;
+  justify-content: space-between; /* keeps brand on left, nav on right */
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+  /* pushes nav to far right */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  background-color: white;
+  color: palevioletred;
+  border-radius: 5px;
+}
+
+.lang-toggle button {
+  background: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lang-toggle button:hover {
+  background: #ddd;
+}
+
+main {
+  padding-top: 120px; /* avoid content hidden under fixed nav */
+}
+.animated-title {
+  font-family: Arial, Helvetica, sans-serif; /* stylish font */
+  font-size: 60px;                     /* big text */
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  animation: moveHorizontally 8s ease-in-out infinite;
+}
+
+
+@keyframes moveHorizontally {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+@keyframes moveHorizontally {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 20px; /* change how far you want it to move */
+  }
+  100% {
+    left: 0;
+  }
+}
+.hero {
+  height: 400px; /* change height to fit your design */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  animation: slideShow 20s infinite;
+  position: relative;
+}
+
+@keyframes slideShow {
+  0% {
+    background-image: url('images/image2.jpg');
+  }
+  25% {
+    background-image: url('images/image4.jpg');
+  }
+  50% {
+    background-image: url('images/image 5.jpg');
+  }
+  75% {
+    background-image: url('images/image6.jpg');
+  }
+  100% {
+    background-image: url('images/image7.jpg');
+  }
+}
+.animated-title {
+  font-size: 2.5em;
+  animation: moveHorizontally 8s ease-in-out infinite;
+}
+
+@keyframes moveHorizontally {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+.animated-title {
+  color: white; /* makes text white */
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05); /* zoom effect on hover */
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product h4 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.product p {
+  font-size: 1em;
+  color: #ff69b4; /* nice salon theme color */
+  font-weight: bold;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+div {
+  background-color: palevioletred;
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  background-color: #e91e63;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #c2185b;
+}
+.register-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 350px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+
