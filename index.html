@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>sandie hair saloon</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body style="background-color: black;">
+  <header class="site-header">
+  <div class="brand">
+    <h1 class="animated-title">SANDIE HAIR SALON</h1>
+    <p class="tag">where hair meets elegance</p>
+  </div>
+<div class="header-right">
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#booking">Book</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html">Login</a>
+
+  </nav>
+
+  <div class="lang-toggle">
+    <button id="lang-en">EN</button>
+    <button id="lang-es">ES</button>
+  </div>
+  </div>
+</header>
+
+
+  <main>
+    <!-- Hero / Home -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <h2 class="animated-title"><b>Welcome to Sandie hair saloon</b></h2>
+        <p>Beauty, care and relaxation in one place.</p>
+        <a class="btn" href="#booking">Book Now</a>
+      </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="card">
+      <h3>About Us</h3>
+      <p>Sandie hair salon is a family-run salon delivering professional services for hair, nails, and skin.</p>
+      <div class="team">
+        <div class="member"><img src="images\image8.jpg" alt="stylist"><h4>sandra</h4><p>Senior Stylist</p></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="card">
+      <h3>Services</h3>
+      <ul>
+      <li>braids</li>
+      <li>conrows</li>
+      <li>pony tails</li>
+      <li>knotless</li>
+      <li>crochet</li>
+      </ul>
+      <div id="services-list" class="grid"></div>
+    </section>
+
+    <!-- Booking -->
+    <!-- Booking -->
+<section id="booking" class="card">
+  <h3>Online Booking</h3>
+  <form id="booking-form">
+    <label>Full name
+      <input name="name" required>
+    </label>
+    <label>Phone
+      <input name="phone" required>
+    </label>
+    <label>Service
+  <select name="serviceId" id="service-select" required>
+    <option value="">-- Select a service --</option>
+    <option value="braiding">Braiding - $30</option>
+    <option value="haircut">Haircut - $20</option>
+    <option value="wig">Wig Installation - $40</option>
+    <option value="treatment">Hair Treatment - $25</option>
+    <option value="styling">Styling - $35</option>
+  </select>
+</label>
+
+    <label>Date & Time
+      <input type="datetime-local" name="datetime" required>
+    </label>
+    <label>Stylist
+      <select name="stylist">
+        <option>Any</option>
+        <option>sandra</option>
+        <option>Ria</option>
+      </select>
+    </label>
+    <button type="submit" class="btn">Request Booking</button>
+  </form>
+  <div id="booking-result" class="note"></div>
+</section>
+
+
+    <!-- Gallery -->
+    <section id="gallery" class="card">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="">
+        <img src="images/g2.jpg" alt="">
+        <img src="images/g4.jpg" alt="">
+        <img src="images/g3.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="card">
+      <h3>Reviews</h3>
+      <div id="reviews-list"></div>
+      <form id="review-form">
+        <input name="name" placeholder="Your name" required>
+        <select name="rating">
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Good</option>
+          <option value="3">3 - Okay</option>
+        </select>
+        <textarea name="text" placeholder="Your review" required></textarea>
+        <button class="btn">Submit Review</button>
+      </form>
+    </section>
+
+    <!-- Offers / Memberships -->
+    <section id="offers" class="card">
+      <h3>Special Offers & Memberships</h3>
+      <ul>
+        <li>20% off for first-timers</li>
+        <li>Monthly membership: 3 treatments for $90</li>
+      </ul>
+      <button id="join-membership" class="btn">Join Membership</button>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="card">
+  <h3>Shop</h3>
+  <div class="products-grid">
+    <div class="product">
+      <img src="images/pp1.jpg" alt="Product 1">
+      <h4>braids</h4>
+      <p>200</p>
+    </div>
+    <div class="product">
+      <img src="images/oil.jpg" alt="Product 2">
+      <h4>oil</h4>
+      <p>200</p>
+    </div>
+    <div class="product">
+      <img src="images/b1.jpg" alt="Product 3">
+      <h4>brazilian wool</h4>
+      <p>200</p>
+    </div>
+    <div class="product">
+      <img src="images/fluffy.jpg" alt="Product 4">
+      <h4>fluffy kinky</h4>
+      <p>900</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Blog -->
+    <section id="blog" class="card">
+      <h3>Blog</h3>
+      <article>
+        <h4>5 Tips for Healthy Hair</h4>
+        <p>Use sulfate-free shampoo, don't overwash, condition...</p>
+      </article>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h3>Contact</h3>
+      <div class="contact-grid">
+        <form id="contact-form">
+          <input name="name" placeholder="Name" required>
+          <input name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button class="btn">Send Message</button>
+        </form>
+        <div>
+          <h4>Location</h4>
+          <!-- Google Maps embed placeholder -->
+          <iframe src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width:100%;height:220px;border:0"></iframe>
+          <p>Phone: 8968191637</p>
+          <p>Email: sandrasibanda0733@gmail.com</p>
+          <p>work by appointments</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> salon hair salon. Follow us on <a href="#">Instagram</a>.</p>
+    </footer>
+
+    <!-- WhatsApp quick chat -->
+    <a id="wa-btn" href="https://wa.me/15555555555?text=Hi%20GlowSalon%2C%20I%20have%20a%20question" target="_blank" aria-label="Chat on WhatsApp">Chat</a>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
